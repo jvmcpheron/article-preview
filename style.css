@@ -10,6 +10,7 @@ html{
     align-content: center;
     height: 95vh;
     background-color: aliceblue;
+    flex-wrap: wrap;
 
 }
 
@@ -25,12 +26,14 @@ html{
     border-radius: 15px;
     width: 350px;
     align-self: center;
+    display: flex;
+    flex-wrap: wrap;
  
 }
 
-#article img {
+#item-pic {
     border-radius: 15px 15px 0px 0px;
-    width: 100%;
+    width: 350px;
     height: 220px;
     object-fit: cover;
   }
@@ -43,9 +46,11 @@ h4{
     padding-right: 25px;
     color: hsl(217, 17%, 42%);
     font-size: 18px;
+    width: 300px;
 }
 
 #desc{
+    width: 300px;
     padding-top: 20px;
     margin: 0 0 10px 0;
     padding-left: 25px;
@@ -54,6 +59,10 @@ h4{
     color: hsl(214, 17%, 51%);
     font-size: 13px;
     line-height: 22px;
+}
+
+.text-cont{
+    width: 350px;
 }
 
 
@@ -109,5 +118,55 @@ h4{
     margin-left: 80px;
     margin-top: 7px;
     cursor:pointer;
+    background-color: hsl(0, 0%, 92%);
 }
 
+
+
+
+@media (min-width: 950px){
+
+    .flex{
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        background-color: rgb(255, 255, 255);
+    
+    }
+
+    #article{
+        width: 900px;
+    }
+
+    #item-pic{
+        border-radius: 15px 0px 0px 15px;
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+
+    }
+
+    h4{
+        width: 450px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .text-cont{
+        width: 450px;
+        margin-left: 25px;
+        
+    }
+
+    #desc{
+        line-height: 28px;
+        width: 450px;
+        font-size: 16px;
+    }
+
+    #share-btn{
+        margin-left: 210px;
+        margin-right: 0px;
+    }
+
+}
